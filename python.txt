@@ -1,0 +1,2 @@
+https://github-production-release-asset-2e65be.s3.amazonaws.com/2575439/17e6ca7a-d6d7-11e4-89c7-8d937d4e7ef0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20180621%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20180621T134728Z&X-Amz-Expires=300&X-Amz-Signature=1110e7e2df055337b94cac39b7bba2d4124bda73ffcbfad472f95cee9695af5a&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dcheatsheet.pdf&response-content-type=application%2Foctet-stream
+http://www.atmos.albany.edu/daes/atmclasses/atm350/vi_cheat_sheet.pdf
