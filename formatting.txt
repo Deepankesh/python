@@ -1,0 +1,20 @@
+f=open('txt2xls.txt','rb')
+import xlwt
+#import pdb
+#pdb.set_trace()
+book=xlwt.Workbook()
+sheet1=book.add_sheet('name')
+contents=f.read().decode("utf-16")
+print(contents)
+x=contents.split('\r\n')
+x=x[5:]
+x.pop(1)
+sheet1.merge_range('B1:D1', 'Merged Range', merge_format)
+for i,item in enumerate(x):
+    y=item.split()
+#    if le
+    if len(y)==6:
+        y.pop(4)
+    for j in range(len(y)):
+        sheet1.write(i,j,y[j])
+book.save('writeToXL.xls')
