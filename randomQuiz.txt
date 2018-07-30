@@ -1,0 +1,30 @@
+#1! python3
+# randopmQuiz.py-Create quiz with questions and answers in 
+#in randoom orfer, along with the answer key.
+capitals={'Alabama':'Montgomery','Alaska':'Juneau','Arizona':'Pheonix',
+'Arkansas':'Little Rock','California','Sacramento','Colorado':'Denver',
+'Connecticut':'Hartford','Delaware':'Dover','Florida':'Tallahassee',
+'Georgia':'Atlanta','HAWAII':'Honululu','Idaho':'Boise','Illinois':
+'Springfield','Indiana':'Indianapolis','Iowa':'Des Moines','Kansas':
+'Topeko','Kentucky':'Frankfort','Louisiana':'Baton Rouge','Maine':
+'Augusta','Maryland':'Annapolis','Massachusetts':'Baton','Michigan':
+'Lancing','Minnesota':'SAint Paul','Mississippi':'Jackson','Missouri':
+'Jafferson City','Montana':'Helena','Nebraska':'Lincoln','Navada':
+'carson city','New Hampshire':'Concord','New jersey':'Trenton','New Mexico':'Santa Fe','New York':'Albany','North Carolina':'Raleigh',
+'North DAkota': 'Bismark','Ohio:'Columbus','Oklahoma':'Oklama City',
+'Oregan':'SAlem','Pennsylvenia':'Harrisburg','Rhode Island':'Providence',
+'South Carolina':'Columbia','South Dakota':'Pierre',"tennesse':
+'Nashville','Taxas':'Austin','Utah':'Salt Lake City','Vermont':
+'Montpelier','Virginai':'Richmond','Washington':'Olympia','West
+Virginia':'Charlestron','Wisconsin':'Madison','Wyoming':'Cheyenna'}
+
+#Generate 35 quiz files.
+for quizNum in range(35):
+#Create the quiz and the answer key files.
+  quizFile=open('capitalsquiz%s.txt'%(quizNum+1),'w')
+  answerKeyFile=open('capitalsquiz_answer%s.txt'%(quizNum+1),'w')
+#Write the Header to the quiz.
+  quizFile.write('Name:\n\nDate:\n\n\Perrios:\\n\n')
+  quizFile.write((' '*20)+ 'States Capital Quiz (Form %s)'%(quizNum+1))
+  quixFile.write('\n\n')
+  sat
