@@ -1,0 +1,218 @@
+ foreach ($l in $d){if ($l.categorynumber -eq 12808){$l.message -match '\w+-\w+\\\w+'
+$matches[0]}}
+
+ foreach ($l in $d){if ($l.categorynumber -eq 12808){$l.message -match '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
+$matches[0]}}
+
+
+ foreach ($l in $d){if ($l.categorynumber -eq 12808){$l.message -match '\\\?\?\\(\w:(\\\w+)+)'
+
+$matches[1]}}
+
+ Source Address:         10.189.117.205
+$l.message -match 'Source Address:\s{9}([^ ]*)'
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+ Source Port:            55104
+
+nformation:
+ Share Name:             \\*\DeeFolderNFS
+ Share Path:             \??\C:\Shares\DeeFolderNFS
+
+
+$l.message -match '\\\\\*\\(\w+)'
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+$x -match '\\\?\?\\(\w:(\\\w+)+)'
+
+
+
+R@Ui@Zi4Kbxn4
+
+$x= '      Account Domain:         R1-CORE'
+$x -match 'Account Domain:\s{9}([^' '])'
+
+foreach ($l in $d){if ($l.categorynumber -eq 12808)
+{
+if (-NOT ($l.message.contains('\\*\IPC$')))
+{
+if ($l.message -match 'Account Name:\s{11}(\w+)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+if ($l.message -match 'Account Domain:\s{9}([^ ]*)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+if ($l.message -match 'Source Address:\s{9}([^ ]*)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+if ($l.message -match 'Share Name:\s{13}([^ ]*)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+if ($x -match 'Share Path:\s{13}([^ ]*)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+}}}
+
+
+foreach ($l in $d){if ($l.categorynumber -eq 12808)
+{
+if (-NOT ($l.message.contains('\\*\IPC$')))
+{if ($l.message -match 'Account Name:\s{11}(\w+)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+}}}
+
+
+
+
+$d=get-eventlog security -newest 200
+foreach ($l in $d){
+if ($l.categorynumber -eq 12808){
+if (-NOT ($l.message.contains('\\*\IPC$'))){
+if ($l.message -match 'Account Name:\s{11}(\w+)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+if ($l.message -match 'Account Domain:\s{9}([^ ]*)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+if ($l.message -match 'Source Address:\s{9}([^ ]*)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+if ($l.message -match 'Share Name:\s{13}([^ ]*)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+if ($l.message -match 'Share Path:\s{13}([^ ]*)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+}}}
+
+https://akr.am/blog/posts/a-python-developers-guide-to-powershell
+
+$d='A network share object was accessed.
+
+Subject:
+        Security ID:            S-1-5-21-825750147-1553096506-3895987836-1242386
+        Account Name:           dranjan
+        Account Domain:         R1-CORE
+        Logon ID:               0x297dd89
+
+Network Information:
+        Object Type:            File
+        Source Address:         10.189.117.205
+        Source Port:            55104
+
+Share Information:
+        Share Name:             \\*\DeeFolderNFS
+        Share Path:             \??\C:\Shares\DeeFolderNFS
+
+Access Request Information:
+        Access Mask:            0x1
+        Accesses:               %%4416
+'
+
+
+if ($d -match 'Account Name:\s{11}(\w+)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+
+
+}
+
+$d=get-eventlog security -newest 100
+foreach ($l in $d){if ($l.categorynumber -eq 12808)
+{
+if (-NOT ($l.message.contains('\\*\IPC$')))
+{$l.message
+}}}
+
+
+
+foreach ($l in $d){if ($l.categorynumber -eq 12808)
+{$l.message
+}}
+
+
+
+
+
+$l='A network share object was accessed.
+
+Subject:
+        Security ID:            S-1-5-21-825750147-1553096506-3895987836-1242386
+        Account Name:           lola
+        Account Domain:         R1-CORE
+        Logon ID:               0x71e8a44
+
+Network Information:
+        Object Type:            File
+        Source Address:         10.189.117.205
+        Source Port:            63831
+
+Share Information:
+        Share Name:             \\*\DeeFolderNFS
+        Share Path:             \??\C:\Shares\DeeFolderNFS
+
+Access Request Information:
+        Access Mask:            0x1
+        Accesses:               %%4416
+'
+
+PS C:\Windows\system32>
+foreach ($l in $d){if ($l.categorynumber -eq 12808)
+{
+if (-NOT ($l.message.contains('\\*\IPC$'))){
+if ($l.message -match 'Account Name:\s{11}(\w+)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}}}}
+
+
+
+if ($l -match 'Account Name:\s{11}(\w+)'){
+$matches[1]
+$matches[1]=''
+$matches[0]=''
+}
+
+
+$d=get-eventlog security -newest 100
+foreach ($l in $d){
+if ($l.categorynumber -eq 12808){
+if (-NOT ($l.message.contains('\\*\IPC$'))){
+$l.message
+}}}
+
+
+
+
+$d=get-eventlog security -newest 100
+foreach ($l in $d){
+if ($l.categorynumber -eq 12808){
+$l.message
+}}
